@@ -1,0 +1,23 @@
+.header {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto;
+   grid-template-areas: "a b b b";
+   padding: 2rem 0 3rem 0;
+   background-color: rgb(77, 135, 142);
+   align-items: center;
+   justify-items: center;
+}
+
+.header img {
+   max-width: 15rem;
+   max-height: 15rem;
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
+   grid-area: a;
+}
+
+.container {
+   grid-area: b;
+}
