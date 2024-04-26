@@ -3,9 +3,9 @@ import './Header.css'
 
 function Header() {
    return (
-      <header className="p-2 header">
+      <header className="d-flex p-2 header">
          <img src="./Images/as.png" alt="Me" />
-         <div className="container d-flex flex-column text-center">
+         <div className="d-flex flex-column text-center">
             <h1 className="display-1">
                Alina Pakamorytė
             </h1>

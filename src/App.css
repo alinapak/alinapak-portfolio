@@ -12,3 +12,14 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+}

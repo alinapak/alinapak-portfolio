@@ -1,0 +1,6 @@
+section {
+   grid-area: main;
+   padding: 2rem 0 3rem 0;
+   align-items: center;
+   justify-items: center;
+}

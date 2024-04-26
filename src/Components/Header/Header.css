@@ -1,12 +1,10 @@
 .header {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: auto;
-   grid-template-areas: "a b b b";
    padding: 2rem 0 3rem 0;
    background-color: rgb(77, 135, 142);
    align-items: center;
    justify-items: center;
+   grid-area: header;
+   flex: 1
 }
 
 .header img {
@@ -15,9 +13,9 @@
    width: 100%;
    height: auto;
    border-radius: 50%;
-   grid-area: a;
+   grid-area: image;
 }
 
-.container {
-   grid-area: b;
+header div {
+   flex: 1 1 auto
 }

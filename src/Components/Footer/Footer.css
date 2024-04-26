@@ -1,12 +1,9 @@
 .footer {
-   display: flex;
-   position: fixed;
-   bottom: 0;
-   width: 100%;
    background-color: rgb(77, 135, 142);
    color: white;
    padding: 20px;
    text-align: center;
+   grid-area: footer;
 }
 
 .footer a i::before {
