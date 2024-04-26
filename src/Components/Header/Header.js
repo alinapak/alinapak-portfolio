@@ -1,10 +1,9 @@
-import React from 'react';
 import './Header.css'
 
 function Header() {
    return (
-      <header className="d-flex p-2 header">
-         <img src="./Images/as.png" alt="Me" />
+      <header className="d-flex header">
+         <img className="p-2 m-2" src="./Images/as.png" alt="Me" />
          <div className="d-flex flex-column text-center">
             <h1 className="display-1">
                Alina Pakamorytė
