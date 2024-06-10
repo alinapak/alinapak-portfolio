@@ -1,4 +1,4 @@
-.side-bar {
+/* .side-bar {
    grid-area: sidebar;
    background-color: rgb(77, 135, 142);
    padding: 2rem 0 3rem 1.2rem;
@@ -11,3 +11,7 @@
 .side-bar a:hover {
    border-bottom: 1px solid white
 }
+
+.side-bar a.active {
+   border-bottom: 1px solid white
+} */

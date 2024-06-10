@@ -1,14 +1,23 @@
 import './Header.css'
+import RouteLink from './RouteLink';
 
 function Header() {
+   const links = [
+      { href: './', title: 'Home' },
+      { href: './about', title: 'About Me' },
+      { href: './education', title: 'Education' },
+      { href: './experience', title: 'Work Experience' }
+   ];
+   // TODO: add skills section
+   // TODO: set styles separately?
+
    return (
-      <header className="d-flex header">
-         <img className="p-2 m-2" src="./Images/as.png" alt="Me" />
-         <div className="d-flex flex-column text-center">
-            <h1 className="display-1">
-               Alina Pakamorytė
-            </h1>
-            <p className="display-6">Web Developer</p>
+      <header className="d-flex header align-items-center">
+         <RouteLink key={-1} href='./' title={'logo'} ></RouteLink>
+         <div className="nav d-flex justify-content-end gap-1">
+            {links.map((link, index) => (
+               <RouteLink key={index} href={link.href} title={link.title} />
+            ))}
          </div>
       </header>
    )

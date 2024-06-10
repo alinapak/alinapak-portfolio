@@ -15,12 +15,14 @@ a:hover {
 }
 
 #root {
+  /* padding: 4rem 8rem; */
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 10rem 1fr auto;
   grid-template-areas:
     "header header header header header"
-    "sidebar main main main main"
+    "main main main main main"
     "footer footer footer footer footer";
   min-height: 100vh;
 }
