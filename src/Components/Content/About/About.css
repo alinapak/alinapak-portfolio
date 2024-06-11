@@ -1,8 +1,43 @@
 .content {
    grid-area: main;
-   padding: 2rem 0 3rem 0;
-   align-items: center;
-   justify-items: center;
    background-color: white;
-   width: calc(100% - 20vw);
+}
+
+.round-content {
+   background: white;
+   border-radius: 5rem;
+   padding: 1rem;
+}
+
+.home section {
+   min-height: calc(100vh - 18rem)
+}
+
+.bubble-content {
+   background-color: white;
+   color: rgb(77, 135, 142);
+   border-radius: 50%;
+   width: 45rem;
+   height: 45rem;
+   position: relative;
+}
+
+.bubble-content p,
+.bubble-content h2,
+.bubble-content .skills {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0;
+   text-align: center;
+}
+
+.bubble-content .skills .progress-bar {
+   background-color: rgb(77, 135, 142);
+   font-size: 1.2rem
+}
+
+.bubble-content .skills .progress {
+   height: 2rem
 }

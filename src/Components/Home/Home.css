@@ -2,26 +2,15 @@
    grid-area: main;
 }
 
+.img-container {
+   width: 45rem;
+   height: 45rem;
+   max-width: 45rem
+}
+
 .home img {
    border-radius: 50%;
    width: 100%;
    height: auto;
    max-width: 45rem
-}
-
-.bubble-content {
-   background-color: white;
-   color: rgb(77, 135, 142);
-   border-radius: 50%;
-   width: 45rem;
-   height: 45rem;
-   position: relative;
-}
-
-.bubble-content p {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   margin: 0;
 }

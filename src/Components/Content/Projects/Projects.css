@@ -1,0 +1,38 @@
+.projects {
+   grid-area: main;
+}
+
+.carousel-item video {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+.carousel-item::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0);
+   transition: background 0.3s ease;
+}
+
+.carousel-item:hover::before {
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+   top: 20rem;
+   bottom: 20rem
+}
+
+.carousel-control-prev:hover~.carousel-inner .carousel-item::before {
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-next:hover~.carousel-inner .carousel-item::before {
+   background: rgba(0, 0, 0, 0.5);
+}

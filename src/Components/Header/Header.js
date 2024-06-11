@@ -5,8 +5,7 @@ function Header() {
    const links = [
       { href: './', title: 'Home' },
       { href: './about', title: 'About Me' },
-      { href: './education', title: 'Education' },
-      { href: './experience', title: 'Work Experience' }
+      { href: './projects', title: 'Projects' }
    ];
    // TODO: add skills section
    // TODO: set styles separately?
