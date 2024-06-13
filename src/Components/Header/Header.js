@@ -11,7 +11,7 @@ function Header() {
    // TODO: set styles separately?
 
    return (
-      <header className="d-flex header align-items-center">
+      <header className="d-flex header align-items-center fixed-top">
          <RouteLink key={-1} href='./' title={'logo'} ></RouteLink>
          <div className="nav d-flex justify-content-end gap-1">
             {links.map((link, index) => (

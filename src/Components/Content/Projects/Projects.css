@@ -36,3 +36,30 @@
 .carousel-control-next:hover~.carousel-inner .carousel-item::before {
    background: rgba(0, 0, 0, 0.5);
 }
+
+.skills .nav-link {
+   border-bottom: 1px solid transparent;
+   width: fit-content;
+   margin: 0 auto;
+}
+
+.skills .nav-link:hover {
+   border-bottom: 1px solid rgb(77, 135, 142)
+}
+
+.external-link {
+   display: flex;
+   padding: 1rem;
+   background: rgb(77, 135, 142);
+   color: white;
+   font-size: 1.6rem;
+   gap: 1rem;
+   width: fit-content;
+   transition: transform 0.2s ease;
+}
+
+.external-link:hover {
+   transform: translate(2px, -2px);
+   background: rgb(77, 135, 142);
+   color: white;
+}

@@ -1,8 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from 'react';
 
 function RouteLink({ href, title, key }) {
    const location = useLocation();
-
+   const hash = location.hash
+   useEffect(() => {
+      if (hash === '') {
+         window.scrollTo({
+            top: 0,
+            behavior: 'instant' // change to 'smooth' if you prefer smooth scrolling
+         });
+      }
+   }, [hash, location]);
    // Function to determine if the link is active
    const isActive = (target) => {
       console.log(location.pathname, 'target')

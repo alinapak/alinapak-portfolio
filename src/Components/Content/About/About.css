@@ -9,7 +9,8 @@
    padding: 1rem;
 }
 
-.home section {
+.home section,
+.projects section {
    min-height: calc(100vh - 18rem)
 }
 
