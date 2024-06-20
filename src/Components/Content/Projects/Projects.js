@@ -1,17 +1,23 @@
 import './Projects.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from "react-router-dom";
 
 
 function Projects() {
    const [activeIndex, setActiveIndex] = useState(0);
    let activeLink = ''
+   const videoRefs = useRef([]);
 
-   const carouselItems = [
-      { type: 'video', src: './videos/shopping-list.mp4', title: 'Shopping List App', description: 'Simple CRUD app, created with React.js, and browser localstorage is used for data save', href: "https://alinapak.github.io/shoppingListApp2/" },
-      { type: 'video', src: './videos/vue-form.mp4', title: 'Vue Form App', description: 'Simple CRUD app, created with Vue.js, all data is stored in browser localstorage for saving purposes', href: "https://github.com/alinapak/VueFormPinia" },
-      { type: 'video', src: './videos/shopping-list.mp4', title: 'Shopping List App', description: '', href: '#' },
-   ];
+   const carouselItems = useMemo(() =>
+      [{ type: 'video', src: './videos/responsive-design-page.mp4', title: 'Design imitation project', description: 'This project aims to imitate a specific design with responsive capabilities using Vue and Nuxt setup. Styling was implemented with raw CSS.', href: 'https://github.com/alinapak/ThirdTaskDesignPage' },
+      { type: 'video', src: './videos/shopping-list.mp4', title: 'Shopping List App', description: 'Simple CRUD app, created with React.js, and browser localstorage is used for data save.', href: "https://alinapak.github.io/shoppingListApp2/" },
+      { type: 'video', src: './videos/figma-design-app.mp4', title: 'Figma design FE project', description: 'A purpose of this project was to recreate a page, designed by Figma, with HTML, raw CSS and Jawascript.', href: 'https://github.com/alinapak/Friday-Chalenge' },
+      { type: 'video', src: './videos/restaurantApp.mp4', title: 'Restaurant Management App', description: 'The Restaurant-Menu-Dish App was developed as a final assignment at Baltic Institute of Technology. It features a backend API built with Laravel for CRUD operations restricted to admins, alongside a React.js frontend providing read-only functionality for all users.', href: 'https://github.com/alinapak/RestaurantExam' },
+      { type: 'video', src: './videos/theme-toggle-button.mp4', title: 'Theme toggle button', description: 'It is a button designed to switch the theme of a page. The project achieves this using raw HTML for structure, JavaScript for functionality, and SCSS for responsive styling of the button\'s circular switch.', href: 'https://github.com/alinapak/TaskNumberOne' },
+      { type: 'video', src: './videos/ORM-app.mp4', title: 'Personnel Management App', description: 'This PHP project utilizes raw CSS and the PHP Composer library. It incorporates ORM Doctrine for managing database schemas with 1 relationships (1:M), displaying table data and their relations in the browser, implementing CRUD functionalities for employees and projects, and allowing assignment of employees to projects,.', href: 'https://github.com/alinapak/personnelManComposer' },
+      { type: 'video', src: './videos/file-browser.mp4', title: 'PHP File Browser App', description: 'This project was created for educational purposes and includes features such as directory and file browsing, folder navigation, directory creation, file deletion, file uploading and downloading, and login authentication using raw CSS and PHP.', href: 'https://github.com/alinapak/fileNav' },
+      { type: 'video', src: './videos/vue-form.mp4', title: 'Vue Form App', description: 'Simple CRUD app, created with Vue.js, all data is stored in browser localstorage for saving purposes.', href: "https://github.com/alinapak/VueFormPinia" },
+      ]);
    // const handleIndicatorClick = (index) => {
    //    setActiveIndex(index);
    // };
@@ -26,6 +32,28 @@ function Projects() {
       setActiveIndex((prevIndex) => (prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1));
    };
    activeLink = carouselItems[activeIndex].title
+   useEffect(() => {
+      const handleMouseEnter = (video) => {
+         video.playbackRate = 2.0;
+         video.play();
+      };
+      const handleMouseLeave = (video) => {
+         video.pause();
+      };
+
+      videoRefs.current.forEach((video) => {
+         video.addEventListener('mouseenter', () => handleMouseEnter(video));
+         video.addEventListener('mouseleave', () => handleMouseLeave(video));
+      });
+
+      // Cleanup event listeners on component unmount
+      return () => {
+         videoRefs.current.forEach((video) => {
+            video?.removeEventListener('mouseenter', () => handleMouseEnter(video));
+            video?.removeEventListener('mouseleave', () => handleMouseLeave(video));
+         });
+      };
+   }, [carouselItems]);
    return (
       <div className="projects">
          <section className="pt-2 container d-flex align-items-center flex-wrap gap-1">
@@ -84,10 +112,12 @@ function Projects() {
                      <p className="card-text">{item.description}</p>
                      <div
                         onClick={() => handleDivClick(item.href)} className="btn external-link">
-                        <i class="bi bi-box-arrow-up-right"></i><Link>Visit website</Link>
+                        <i className="bi bi-box-arrow-up-right"></i><Link>Visit website</Link>
                      </div>
                   </div>
-                  <video controls className="card-img-bottom p-5" src={item.src} type={item.type}></video>
+                  <video ref={(el) => videoRefs.current[index] = el}
+                     muted controls className="card-img-bottom p-5" src={item.src} type={item.type}
+                  ></video>
                </div>
             ))}
          </section>

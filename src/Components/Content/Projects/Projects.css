@@ -58,8 +58,9 @@
    transition: transform 0.2s ease;
 }
 
-.external-link:hover {
-   transform: translate(2px, -2px);
-   background: rgb(77, 135, 142);
-   color: white;
+.external-link:hover,
+.external-link:active {
+   transform: translate(2px, -2px) !important;
+   background: rgb(77, 135, 142) !important;
+   color: white !important;
 }

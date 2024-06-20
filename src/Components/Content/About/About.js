@@ -9,40 +9,40 @@ function About() {
             <div className="align-self-start me-auto bubble-content">
                <div className="skills">
                   <span>HTML</span>
-                  <div class="progress ">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "100%" }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                  <div className="progress ">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "100%" }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                   </div>
                   <span>CSS/SCSS/SASS</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "95%" }} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "95%" }} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
                   </div>
                   <span>JavaScript/TypeScript</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "95%" }} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "95%" }} aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
                   </div>
                   <span>Vue.js/Nuxt.js</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "90%" }} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "90%" }} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                   </div>
                   <span>PHP/Laravel</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "50%" }} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "50%" }} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
                   </div>
                   <span>SQL</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                   </div>
                   <span>React.js</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                   </div>
                   <span>Bootstrap</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                   </div>
                   <span>GIT</span>
-                  <div class="progress">
-                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  <div className="progress">
+                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
                   </div>
                </div>
             </div>

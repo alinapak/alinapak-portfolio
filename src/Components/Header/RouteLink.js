@@ -11,10 +11,9 @@ function RouteLink({ href, title, key }) {
             behavior: 'instant' // change to 'smooth' if you prefer smooth scrolling
          });
       }
-   }, [hash, location]);
+   }, [location.pathname]);
    // Function to determine if the link is active
    const isActive = (target) => {
-      console.log(location.pathname, 'target')
       return location.pathname === target.replace('.', "");
    };
    return (
