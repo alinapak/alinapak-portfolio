@@ -17,7 +17,7 @@ function Projects() {
       { type: 'video', src: './videos/ORM-app.mp4', title: 'Personnel Management App', description: 'This PHP project utilizes raw CSS and the PHP Composer library. It incorporates ORM Doctrine for managing database schemas with 1 relationships (1:M), displaying table data and their relations in the browser, implementing CRUD functionalities for employees and projects, and allowing assignment of employees to projects,.', href: 'https://github.com/alinapak/personnelManComposer' },
       { type: 'video', src: './videos/file-browser.mp4', title: 'PHP File Browser App', description: 'This project was created for educational purposes and includes features such as directory and file browsing, folder navigation, directory creation, file deletion, file uploading and downloading, and login authentication using raw CSS and PHP.', href: 'https://github.com/alinapak/fileNav' },
       { type: 'video', src: './videos/vue-form.mp4', title: 'Vue Form App', description: 'Simple CRUD app, created with Vue.js, all data is stored in browser localstorage for saving purposes.', href: "https://github.com/alinapak/VueFormPinia" },
-      ]);
+      ], []);
    // const handleIndicatorClick = (index) => {
    //    setActiveIndex(index);
    // };
@@ -115,9 +115,11 @@ function Projects() {
                         <i className="bi bi-box-arrow-up-right"></i><Link>Visit website</Link>
                      </div>
                   </div>
-                  <video ref={(el) => videoRefs.current[index] = el}
-                     muted controls className="card-img-bottom p-5" src={item.src} type={item.type}
-                  ></video>
+                  <div className="video-wrapper p-5">
+                     <video ref={(el) => videoRefs.current[index] = el}
+                        muted controls className="card-img" src={item.src} type={item.type}
+                     ></video>
+                  </div>
                </div>
             ))}
          </section>
