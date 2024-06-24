@@ -1,24 +1,25 @@
-// import './SideNav.css';
-// // import RouteLink from '../Header/RouteLink';
+import './SideNav.css';
+import Icon from './SideNavIcons'
+// import RouteLink from '../Header/RouteLink';
 
-// function SideNav() {
-//    const links = [
-//       { href: './about', title: 'About Me' },
-//       { href: './education', title: 'Education' },
-//       { href: './experience', title: 'Work Experience' }
-//    ];
-//    // TODO: add skills section
-//    // TODO: set styles separately?
+function SideNav() {
+   const icons = [
+      { name: 'linkedin', href: 'https://www.linkedin.com/in/alina-pakamoryt%C4%97-73a66377/' },
+      { name: 'github', href: 'https://github.com/alinapak/' },
+      { name: 'cart', href: 'https://alinapak.github.io/shoppingListApp2/' },
+   ];
+   // TODO: add skills section
+   // TODO: set styles separately?
 
-//    return (
-//       <nav className="side-bar container">
-//          <div className="nav container d-flex flex-column align-items-center gap-1">
-//             {/* {links.map((link, index) => (
-//                // <RouteLink key={index} href={link.href} title={link.title} />
-//             ))} */}
-//          </div>
-//       </nav>
-//    )
-// }
+   return (
+      <nav className="side-bar">
+         <div className="nav container d-flex flex-column align-items-center justify-content-center">
+            {icons.map((icon, index) => (
+               <Icon key={index} name={icon.name} href={icon.href} />
+            ))}
+         </div>
+      </nav>
+   )
+}
 
-// export default SideNav;
+export default SideNav;

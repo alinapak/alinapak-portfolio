@@ -55,7 +55,7 @@ function About() {
                Skills gained while working and learning web development
             </p></div>
          </section>
-         <section className="pt-2 home container d-flex align-items-center flex-wrap gap-1">
+         <section className="pt-2 container d-flex align-items-center flex-wrap gap-1">
             <div className="align-self-start me-auto bubble-content"><p>
                From September 2022 to April 2024, I worked at UAB "CherryTeam," where, along with other developers, I developed a business management system app. We used Vue.js and Nuxt.js frameworks, along with HTML, CSS/SCSS, JavaScript/TypeScript, SQL, and Git.
             </p></div>
@@ -68,7 +68,7 @@ function About() {
                I worked closely with both frontend and backend teams to ensure seamless integration and functionality. I am proficient in maintaining separate frontend and backend systems, creating APIs, and managing communication between the frontend and backend during development.
             </p></div>
          </section>
-         <section className="pt-2 home container d-flex align-items-center flex-wrap gap-1">
+         <section className="pt-2 container d-flex align-items-center flex-wrap gap-1">
             <div className="align-self-start me-auto bubble-content"><p>
                PHP Developer | Baltic Institute of Technology on 2022
             </p></div>
