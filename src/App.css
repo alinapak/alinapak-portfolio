@@ -2,7 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  --bs-body-font-size: 1.6rem !important
+  --bs-body-font-size: 1.6rem !important;
+  list-style: none;
 }
 
 a {
@@ -48,4 +49,19 @@ a:hover {
 
 .nav-link.not-blur {
   filter: blur(0) !important;
+}
+
+.page {
+  transition: transform 0.8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
+  /* position: absolute;
+  width: 100%;
+  height: 100%; */
+}
+
+.page.slide-enter {
+  transform: translateX(0);
+}
+
+.page.slide-exit {
+  transform: translateX(-100%);
 }

@@ -1,7 +1,9 @@
 import './Home.css'
-import RouteLink from '../Header/RouteLink';
+import RouteLink from '../../Header/RouteLink';
+import { useState } from 'react';
 
 function Home() {
+   // TODO: transition / animation on going to other page
    const links = [
       { href: './', title: 'Home' },
       { href: './about', title: 'About Me' },

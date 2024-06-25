@@ -5,13 +5,3 @@
    text-align: center;
    grid-area: footer;
 }
-
-.footer a i::before {
-   padding: 0.5rem;
-   border-radius: 50%;
-   border: 1px solid transparent;
-}
-
-.footer a:hover i::before {
-   border: 1px solid white;
-}

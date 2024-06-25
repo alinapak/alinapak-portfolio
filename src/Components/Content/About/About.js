@@ -10,7 +10,7 @@ function About() {
                <div className="skills">
                   <span>HTML</span>
                   <div className="progress ">
-                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: "100%" }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                     <div className="progress-bar progress-bar-striped progress-bar-animated w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                   </div>
                   <span>CSS/SCSS/SASS</span>
                   <div className="progress">

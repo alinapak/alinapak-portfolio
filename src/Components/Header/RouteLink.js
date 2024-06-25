@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
 
-function RouteLink({ href, title, key, component }) {
+function RouteLink({ href, title, component }) {
    const location = useLocation();
    const hash = location.hash;
    const originalLinkRef = useRef(null);
@@ -12,6 +12,7 @@ function RouteLink({ href, title, key, component }) {
    });
    useEffect(() => {
       if (hash === '') {
+
          if (component !== 'home') {
             const clonedLinks = document.getElementsByClassName('cloned-link');
             Array.from(clonedLinks).forEach(link => {

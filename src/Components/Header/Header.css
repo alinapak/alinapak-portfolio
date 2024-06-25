@@ -31,6 +31,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   border-radius: var(--bs-border-radius);
 }
 
 .header .nav a::before,
@@ -54,10 +55,12 @@
    z-index: 0;
 }
 
-.header .nav a:hover::before {
+.header .nav a:hover::before,
+.header .nav a.active::before {
    width: 0;
 }
 
-.header .nav a:hover::after {
+.header .nav a:hover::after,
+.header .nav a.active::after {
    height: 0;
 }

@@ -47,7 +47,8 @@
    border-bottom: 1px solid rgb(77, 135, 142)
 }
 
-.external-link {
+.external-link,
+.filter-btn {
    display: flex;
    padding: 1rem;
    background: rgb(77, 135, 142);
@@ -55,7 +56,7 @@
    font-size: 1.6rem;
    gap: 1rem;
    width: fit-content;
-   transition: transform 0.2s ease;
+   transition: transform 0.2s ease, border 0.2s ease;
 }
 
 .external-link:hover,
@@ -63,4 +64,19 @@
    transform: translate(2px, -2px) !important;
    background: rgb(77, 135, 142) !important;
    color: white !important;
+}
+
+.filter-btn:hover,
+.filter-btn:active {
+   transform: translate(2px, -2px) !important;
+   border: 1px solid white
+}
+
+.filter-list button {
+   background: white;
+   color: rgb(77, 135, 142)
+}
+
+.content-container {
+   min-height: 45rem;
 }

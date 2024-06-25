@@ -4,6 +4,11 @@
    overflow-x: hidden;
 }
 
+.home,
+.projects {
+   margin-right: 3.5rem
+}
+
 .img-container {
    width: 45rem;
    height: 45rem;
@@ -31,7 +36,8 @@
    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.bubble-wrapper a:hover,.cloned-link:hover {
+.bubble-wrapper a:hover,
+.cloned-link:hover {
    background-color: rgb(77, 135, 142);
    color: white !important;
    border: solid 1px white;
