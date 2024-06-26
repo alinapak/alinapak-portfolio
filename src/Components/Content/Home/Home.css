@@ -1,12 +1,12 @@
 .home {
    grid-area: main;
-   max-width: 100vw;
-   overflow-x: hidden;
+   /* max-width: 100vw;
+   overflow-x: hidden; */
 }
 
 .home,
 .projects {
-   margin-right: 3.5rem
+   margin: 0 3.5rem
 }
 
 .img-container {
@@ -44,6 +44,7 @@
    transform: scale(1.2);
 }
 
+/* TODO: get rid of these animations? */
 .img-container.animate-from-left {
    animation: animateFromLeft 1s forwards;
 }

@@ -4,22 +4,16 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import About from './Components/Content/About/About';
-import Projects from './Components/Content/Projects/Projects';
 import SideNav from './Components/Navigation/SideNav';
-import Home from './Components/Content/Home/Home';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from './Components/AnimatedRoutes/AnimatedRoutes';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <SideNav />
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/projects' element={<Projects />} />
-      </Routes>
+      <AnimatedRoutes />
       <Footer />
     </BrowserRouter>
   )

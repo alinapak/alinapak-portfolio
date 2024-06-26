@@ -1,7 +1,10 @@
 .side-bar {
-   grid-area: sidebar;
+   position: fixed;
+   left: 0;
+   top: 10rem;
    background-color: rgb(77, 135, 142);
    min-height: calc(100vh - 18rem);
+   width: 3.5rem;
    display: flex;
    align-items: center;
    justify-content: space-around;

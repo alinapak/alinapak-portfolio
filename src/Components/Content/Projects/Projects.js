@@ -2,11 +2,12 @@ import './Projects.css';
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from "react-router-dom";
 import Loader from '../../Loader/Loader'
-
+import { motion } from "framer-motion";
 
 function Projects() {
    const [activeIndex, setActiveIndex] = useState(0);
    const [loading, setLoading] = useState(false);
+   const [filterClicked, setFilterClicked] = useState(false);
    const videoRefs = useRef([]);
    const filters = ['ALL', 'FRONT\u2011END', 'BACK\u2011END', 'HTML5', 'SCSS', 'JAVASCRIPT', 'TYPESCRIPT', 'REACT.JS', 'VUE.JS', 'MYSQL', 'LARAVEL', 'PHP', 'SYMFONY']
    const carouselItems = useMemo(() =>
@@ -21,10 +22,11 @@ function Projects() {
       ], []);
    const [filteredItems, setFilteredItems] = useState(carouselItems);
    const handleIndicatorClick = (index) => {
+      setFilterClicked(true)
       setActiveIndex(index);
    };
    const filterItems = (selectedFilter) => {
-      setLoading(true);
+      setLoading(true); // only when it is not on mount
       if (selectedFilter === 'ALL') {
          setFilteredItems(carouselItems);
          return;
@@ -58,24 +60,15 @@ function Projects() {
    const handleDivClick = (href) => {
       window.open(href, '_blank');
    };
-   // const handlePrevClick = () => {
-   //    setActiveIndex((prevIndex) => (prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1));
-   // };
-
-   // const handleNextClick = () => {
-   //    setActiveIndex((prevIndex) => (prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1));
-   // };
-   // activeLink = carouselItems[activeIndex].title
    useEffect(() => {
-      filterItems(filters[activeIndex]);
-      setTimeout(() => {
-         setLoading(false);
-
-      }, 1000)
+      if (filterClicked) {
+         filterItems(filters[activeIndex]);
+         setTimeout(() => {
+            setLoading(false);
+         }, 1000)
+      }
    }, [activeIndex]);
-   // useEffect(() => {
-   //    videoRefs.current = videoRefs.current.slice(0, filteredItems.length);
-   // }, [filteredItems]);
+
    useEffect(() => {
 
       const handleMouseEnter = (video) => {
@@ -101,7 +94,10 @@ function Projects() {
    }, [!loading]);
 
    return (
-      <div className="projects">
+      <motion.div className="projects"
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0 }}>
          <section className="pt-2 container d-flex  flex-wrap gap-1">
             <div className="content-container d-flex justify-content-center flex-column text-white">
                <h1 className="display-1">
@@ -115,7 +111,12 @@ function Projects() {
             </div>
          </section >
          <section className="pt-2 container d-flex align-items-center flex-wrap gap-5">
-            {loading && <Loader text={`Filtering ${filters[activeIndex]} projects`} />} {/* Loader displayed while loading */}
+            {loading && <Loader text={
+               <>
+                  {`${filters[activeIndex] === 'ALL' ? 'Showing' : 'Filtering'}`}
+                  <em> {filters[activeIndex]} </em> projects
+               </>
+            } />}
             {!loading && <div className="row">
                {filteredItems.map((item, index) => (
                   <div key={index} className="col-sm-6 mt-4">
@@ -140,7 +141,7 @@ function Projects() {
             </div>}
 
          </section>
-      </div >
+      </motion.div >
    );
 }
 

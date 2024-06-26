@@ -1,11 +1,13 @@
 import './About.css'
-
+import { motion } from "framer-motion";
 function About() {
 
    return (
-      <div className="home">
+      <motion.div className="home"
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0 }}>
          <section className="pt-2 container d-flex align-items-center flex-wrap gap-1">
-            {/* todo : bootstrap progress */}
             <div className="align-self-start me-auto bubble-content">
                <div className="skills">
                   <span>HTML</span>
@@ -81,7 +83,7 @@ function About() {
                Psychology | KU (Klaipeda University) on 2014
             </p></div>
          </section>
-      </div>
+      </motion.div>
    )
 }
 
