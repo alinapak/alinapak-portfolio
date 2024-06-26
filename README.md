@@ -6,12 +6,12 @@ This app serves as my portfolio, providing insights into both my personality and
 
 ## Styling and Libraries Utilized
 
-- Bootstrap
+- ### Bootstrap
   I used Bootstrap for faster styling and to avoid writing classes manually, as well as for its pre-built components such as buttons, card layouts, and more.
-- Custom CSS
+- ### Custom CSS
   Custom CSS was extensively used to tailor the design and layout to specific project requirements. This included customizing colors, typography, spacing, and other visual elements not covered by Bootstrap.
-- Framer Motion
-  To enhance UX, I utilized Framer Motion, a library integrated with React 18, for smooth page transitions. I found it to be a versatile tool, easy to use and integrate into existing projects without disrupting established styles. To install Framer Motion, you can add it via npm or yarn: `npm install framer-motion` or `yarn add framer-motion`. For more information, you can visit their [website](https://www.framer.com/motion/).
+- ### Framer Motion
+  To enhance UX, I utilized Framer Motion, a library integrated with React 18, for smooth page transitions. I found it to be a versatile tool, easy to use and integrate into existing projects without disrupting established styles. To install Framer Motion, you can add it via npm or yarn: `npm install framer-motion` or `yarn add framer-motion`. For more information, you can visit their website [https://www.framer.com/motion/](https://www.framer.com/motion/).
 
 ## Launch
 
