@@ -11,7 +11,7 @@ This app serves as my portfolio, providing insights into both my personality and
 - ### Custom CSS
   Custom CSS was extensively used to tailor the design and layout to specific project requirements. This included customizing colors, typography, spacing, and other visual elements not covered by Bootstrap.
 - ### Framer Motion
-  To enhance UX, I utilized Framer Motion, a library integrated with React 18, for smooth page transitions. I found it to be a versatile tool, easy to use and integrate into existing projects without disrupting established styles. To install Framer Motion, you can add it via npm or yarn: `npm install framer-motion` or `yarn add framer-motion`. For more information, you can visit their website [https://www.framer.com/motion/](https://www.framer.com/motion/).
+  To enhance UX, I utilized Framer Motion, a library integrated with React 18, for smooth page transitions. I found it to be a versatile tool, easy to use and integrate into existing projects without disrupting established styles. To install Framer Motion, you can add it via npm or yarn: `npm install framer-motion` or `yarn add framer-motion`. For more information, you can visit their website <a href="https://www.framer.com/motion/" target="_blank">https://www.framer.com/motion/</a>.
 
 ## Launch
 
@@ -22,4 +22,4 @@ This app serves as my portfolio, providing insights into both my personality and
 
 ## Author
 
-[Alina Pakamorytė](https://www.linkedin.com/in/alina-pakamoryt%C4%97-73a66377/)
+[Alina Pakamorytė](https://www.linkedin.com/in/alina-pakamoryt%C4%97-73a66377/)<a href="https://www.linkedin.com/in/alina-pakamoryt%C4%97-73a66377/" target="_blank"></a>
