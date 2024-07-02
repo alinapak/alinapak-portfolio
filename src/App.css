@@ -32,15 +32,15 @@ a:hover {
   position: relative;
 }
 
-#root.blur {
+/* #root.blur {
   filter: blur(5px);
   transition: filter 0.5s ease;
-  /* position: relative; */
-}
+  position: relative;
+} */
 
-#root.blur~.cloned-link {
+/* #root.blur~.cloned-link {
   filter: blur(5px);
-}
+} */
 
 .cloned-link.not-blur {
   filter: blur(0) !important;

@@ -72,8 +72,8 @@ function Projects() {
    useEffect(() => {
 
       const handleMouseEnter = (video) => {
-         video.playbackRate = 2.0;
          video.play();
+         video.playbackRate = 2.0;
       };
 
       const handleMouseLeave = (video) => {
@@ -117,10 +117,10 @@ function Projects() {
                   <em> {filters[activeIndex]} </em> projects
                </>
             } />}
-            {!loading && <div className="row">
+            {!loading && <div >
                {filteredItems.map((item, index) => (
-                  <div key={index} className="col-sm-6 mt-4">
-                     <div className="card h-100">
+                  <div key={index} >
+                     <div className="card mb-5">
                         <div className="card-body d-flex flex-column p-5">
                            <h2 className="card-title">{item.title}</h2>
                            <p className="card-text">{item.description}</p>

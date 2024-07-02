@@ -23,7 +23,7 @@ function Home() {
                   Alina Pakamorytė
                </h1>
                <p className="display-6">Full-Stack Web Developer</p>
-               <div className="bubble-wrapper d-flex justify-content-around">
+               <div className="bubble-wrapper d-flex justify-content-center gap-4">
                   {links.map((link, index) => (
                      < RouteLink component={'home'} key={index} href={link.href} title={link.title} />
                   ))}

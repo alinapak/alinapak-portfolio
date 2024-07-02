@@ -9,7 +9,8 @@
    padding: 1rem;
 }
 
-.home section {
+.home section,
+.about section {
    min-height: calc(100vh - 18rem)
 }
 
@@ -33,11 +34,15 @@
    text-align: center;
 }
 
-.bubble-content .skills .progress-bar {
+.skills .progress-bar {
    background-color: rgb(77, 135, 142);
    font-size: 1.2rem
 }
 
 .bubble-content .skills .progress {
    height: 2rem
+}
+
+.info {
+   font-weight: 300
 }
