@@ -72,7 +72,11 @@ function Projects() {
    useEffect(() => {
 
       const handleMouseEnter = (video) => {
-         video.play();
+         var isPlaying = video.currentTime > 0 && !video.paused && !video.ended
+            && video.readyState > video.HAVE_CURRENT_DATA;
+         if (!isPlaying) {
+            video.play();
+         }
          video.playbackRate = 2.0;
       };
 
